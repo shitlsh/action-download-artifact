@@ -7,3 +7,10 @@ on:
   pull_request:
 
 jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump
+        run: |
+          mkdir artifact
+          echo $GITHUB_SHA > artifact/sha
